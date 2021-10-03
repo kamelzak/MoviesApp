@@ -8,6 +8,8 @@
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+        @livewireStyles
+
     </head>
 
     <body class="font-sans bg-gray-900 text-white">
@@ -30,9 +32,7 @@
                     </li>
                 </ul>
                 <div class="flex flex-col md:flex-row items-center">
-                    <div class="relative">
-                        <input type="text" class="bg-gray-800 rounded-full w-64 px-4 pl-8 py-1 focus:outline-none focus:shadow-outline" placeholder="Search">
-                    </div>
+                    <livewire:search-dropdown>
                     <div class="md:ml-4 mt-3 md:mt-0">
                         <a href="#">
                             <img src="/img/avatar.jpg" alt="avatar" class="rounded-full w-8 h-8">
@@ -44,5 +44,6 @@
 
         @yield('content')
         
+        @livewireScripts
     </body>
 </html>
